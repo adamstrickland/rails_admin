@@ -271,6 +271,7 @@ module RailsAdmin
           ),
             "Symbol"         => { :type => :string, :length => 255 },
             "Time"           => { :type => :datetime },
+            "ActiveSupport::TimeWithZone" => { :type => :datetime },
         }[field.type.to_s] or raise "Type #{field.type.to_s} for field :#{name} in #{model.inspect} not supported"
       end
 
